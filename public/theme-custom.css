@@ -1,0 +1,33 @@
+/* === Takwara Wiki — Tema Crem e Suave === */
+
+:root {
+  --nextra-bg: #faf6f0;
+  --nextra-sidebar-bg: #f5f0e8;
+  --nextra-card-bg: #ffffff;
+  --nextra-text: #1f2937;
+  --nextra-text-dim: #6b7280;
+  --nextra-accent: #4a7c59;
+  --nextra-accent-light: #e8f0e4;
+  --nextra-border: #e5ddd4;
+}
+
+body {
+  background-color: var(--nextra-bg) !important;
+}
+
+article.nx-w-full {
+  background: var(--nextra-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.nextra-sidebar-container {
+  background: var(--nextra-sidebar-bg) !important;
+}
+
+nav a.nx-text-primary-700,
+nav button.nx-text-primary-700 {
+  color: var(--nextra-accent) !important;
+  background: var(--nextra-accent-light) !important;
+  border-radius: 4px;
+}

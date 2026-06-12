@@ -1,9 +1,10 @@
 import type { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
   logo: (
-    <span style={{ fontSize: '1.2rem', fontWeight: 700, color: '#2d6a4f' }}>
-      🌿 Tecnologia Takwara
+    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      <img src="/images/takwara-logo.png" alt="Takwara" style={{ height: '2rem', width: 'auto' }} />
     </span>
   ),
   project: {
@@ -13,6 +14,11 @@ const config: DocsThemeConfig = {
   footer: {
     component: () => <span>© {new Date().getFullYear()} Tecnologia Takwara</span>,
   },
+  head: (
+    <>
+      <link rel="stylesheet" href="/theme-custom.css" />
+    </>
+  ),
 }
 
 export default config
