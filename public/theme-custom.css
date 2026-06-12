@@ -25,8 +25,17 @@ article.nx-w-full {
   background: var(--nextra-sidebar-bg) !important;
 }
 
-nav a.nx-text-primary-700,
-nav button.nx-text-primary-700 {
+nav a,
+nav button,
+.sidebar-content a,
+.sidebar-content button {
+  font-weight: 600 !important;
+}
+
+.nx-text-primary-700,
+nav a:hover,
+nav button:hover {
+  font-weight: 700 !important;
   color: var(--nextra-accent) !important;
   background: var(--nextra-accent-light) !important;
   border-radius: 4px;
