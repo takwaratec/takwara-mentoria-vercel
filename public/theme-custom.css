@@ -1,42 +1,102 @@
 /* === Takwara Wiki — Tema Crem e Suave === */
+/* CORREÇÃO MOBILE: contraste elevado, sem layers sobrepondo texto */
 
 :root {
   --nextra-bg: #faf6f0;
   --nextra-sidebar-bg: #f5f0e8;
-  --nextra-card-bg: #ffffff;
-  --nextra-text: #1f2937;
-  --nextra-text-dim: #6b7280;
-  --nextra-accent: #4a7c59;
-  --nextra-accent-light: #e8f0e4;
-  --nextra-border: #e5ddd4;
+  --card-bg: #ffffff;
+  --text-heading: #111827;
+  --text-body: #374151;
+  --text-dim: #6b7280;
+  --accent: #4a7c59;
+  --accent-light: #e8f0e4;
+  --border: #e5ddd4;
 }
 
+/* Fundo geral */
 body {
   background-color: var(--nextra-bg) !important;
+  color: var(--text-body) !important;
 }
 
-article.nx-w-full {
-  background: var(--nextra-card-bg);
+/* Artigos com fundo branco e padding */
+article.nx-w-full,
+article .nx-w-full,
+main .nx-w-full {
+  background: var(--card-bg) !important;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 
+/* Sidebar */
 .nextra-sidebar-container {
   background: var(--nextra-sidebar-bg) !important;
 }
 
+/* LINKS NO SIDEBAR — BOLD + CONTRASTE */
 nav a,
 nav button,
 .sidebar-content a,
-.sidebar-content button {
+.sidebar-content button,
+li a,
+a.nx-text-primary-700 {
   font-weight: 600 !important;
+  color: var(--text-heading) !important;
 }
 
-.nx-text-primary-700,
 nav a:hover,
-nav button:hover {
+nav button:hover,
+li a:hover,
+.nx-text-primary-700,
+a.active {
   font-weight: 700 !important;
-  color: var(--nextra-accent) !important;
-  background: var(--nextra-accent-light) !important;
+  color: var(--accent) !important;
+  background: var(--accent-light) !important;
   border-radius: 4px;
+}
+
+/* HEADINGS */
+h1, h2, h3, h4, h5, h6,
+.nx-text-primary-800,
+article h1, article h2, article h3 {
+  color: var(--text-heading) !important;
+}
+
+/* TABELAS */
+table th {
+  color: var(--text-heading) !important;
+  font-weight: 700 !important;
+}
+table td {
+  color: var(--text-body) !important;
+}
+
+/* BREADCRUMB */
+nav.nx-sticky a {
+  color: var(--text-dim) !important;
+}
+nav.nx-sticky a:hover {
+  color: var(--accent) !important;
+}
+
+/* HEADER - nome do site */
+header a, header span {
+  color: var(--text-heading) !important;
+}
+
+/* INPUT DE BUSCA */
+input::placeholder {
+  color: var(--text-dim) !important;
+}
+
+/* CORREÇÃO MOBILE: garante que texto não suma */
+@media (max-width: 768px) {
+  article, main, .nx-w-full {
+    padding: 1rem !important;
+    z-index: 1 !important;
+    position: relative !important;
+  }
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
 }
